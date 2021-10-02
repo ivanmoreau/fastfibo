@@ -1,6 +1,6 @@
 # Fast fib on Rust (kinda)
 
-Sooo, I'm just trying to calculate fib(1_000_000) as fast as posible. BUT THERE IS SOMETHING REALLY REALLY WEIRD. TL;DR: it's still not as fast as posible.
+Sooo, I'm just trying to calculate fib(10_000_000) as fast as posible. BUT THERE IS SOMETHING REALLY REALLY WEIRD. TL;DR: it's still not as fast as posible.
 
 Let's take a look into the binary:
 
@@ -37,7 +37,7 @@ So my only guess is that "GMP's Custom Allocation routines" are the trick that m
 
 But it's 3:47 in the morning to keep up investigating this and I'm tired. So it'll be in another time.
 
-Rust: 07m:55s aprox. This repo.
+Rust: 07m:55s aprox. https://github.com/ivanmoreau/fastfibo
 
 Agda: 05m:14s aprox. https://github.com/ggzor/agda-fib-tail-rec/blob/main/Fib.agda
 
