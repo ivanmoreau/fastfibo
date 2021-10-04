@@ -1962,3 +1962,14 @@ pub const GMP_ERROR_DIVISION_BY_ZERO: ::std::os::raw::c_uint = 2;
 pub const GMP_ERROR_SQRT_OF_NEGATIVE: ::std::os::raw::c_uint = 4;
 pub const GMP_ERROR_INVALID_ARGUMENT: ::std::os::raw::c_uint = 8;
 pub type _bindgen_ty_1 = ::std::os::raw::c_uint;
+
+
+
+int fij(int n, int i = 0, int j = 1)
+{
+    if (n == 0)
+        return i;
+    if (n == 1)
+        return j;
+    return fij(n - 1, j, i + j);
+}
