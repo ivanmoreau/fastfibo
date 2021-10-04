@@ -1,5 +1,9 @@
 # Fast fib on Rust (kinda)
 
+
+EDIT: It works!! I'll edit this readme later.
+
+
 Sooo, I'm just trying to calculate fib(10_000_000) as fast as posible. BUT THERE IS SOMETHING REALLY REALLY WEIRD. TL;DR: it's still not as fast as posible.
 
 Let's take a look into the binary:
