@@ -67,19 +67,21 @@ fn fib_iter_good(n: u64) -> mpz_t {
     let mut h = gmpz_init();
     for _ in 0..n {
         //j = &i + &j;
-        let j_pointer: *const mpz_t = &j;
+        let oldj = mpz_t([__mpz_struct {
+                _mp_alloc: i.0[0]._mp_alloc,
+                _mp_size: i.0[0]._mp_size,
+                _mp_d: i.0[0]._mp_d
+            }; 1]);
         h = gmpz_add(&j, &i, h);
         i = j;
         j = h;
-        h = unsafe {
-            *(j_pointer.as_ref().unwrap())
-        };
+        h = oldj
     } j
 }
 
 #[start]
 fn main(_argc: isize, _argv: *const *const u8) -> isize {
-    let val = fib_iter_good(3_000_000);
+    let val = fib_iter_good(10_000_000);
     gmp_printf_val(&val);
     0
 }
