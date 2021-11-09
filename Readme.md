@@ -1,7 +1,10 @@
-# Fast fib on Rust (kinda)
+# UPDATE:
 
+So, I'm just stupid. I was doing x2 operations. So that was it.
 
-EDIT: It works!! I'll edit this readme later.
+Code updated. Still slower tho, but there is an older commit with a huge amount of unsafe-Rust that is faster.
+
+------
 
 
 Sooo, I'm just trying to calculate fib(10_000_000) as fast as posible. BUT THERE IS SOMETHING REALLY REALLY WEIRD. TL;DR: it's still not as fast as posible.
@@ -50,3 +53,8 @@ Agda: 05m:14s aprox. https://github.com/ggzor/agda-fib-tail-rec/blob/main/Fib.ag
 ### Conclusions as of right now
 
 the standard memory allocation of GMP is slow? 🤷🏼‍♀️
+
+
+### Final conclusions
+
+I'm soooooooooooo fucking stupid.
