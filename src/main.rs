@@ -1,13 +1,5 @@
-#![feature(start)]
-#![no_std]
 
-use core::{intrinsics::transmute, panic::PanicInfo};
-
-#[panic_handler]
-fn panic(_info: &PanicInfo) -> ! {
-    loop {}
-}
-
+use core::{intrinsics::transmute};
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct __mpz_struct {
@@ -79,9 +71,7 @@ fn fib_iter_good(n: u64) -> mpz_t {
     } j
 }
 
-#[start]
-fn main(_argc: isize, _argv: *const *const u8) -> isize {
+fn main() {
     let val = fib_iter_good(10_000_000);
     gmp_printf_val(&val);
-    0
 }
